@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "ESNext",
+    "lib": ["ESNext", "DOM"],
+    "jsx": "preserve",
+    "moduleResolution": "Node",
+    "strict": false, // You can set to true later
+    "allowJs": true,
+    "skipLibCheck": true
+  },
+  "include": [
+    ".vitepress/**/*",
+    "**/*.ts",
+    "**/*.vue"
+  ]
+}
