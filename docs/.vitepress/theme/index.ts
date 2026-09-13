@@ -25,15 +25,23 @@ export default {
     // also runs in Node during the SSR build, where `document` doesn't exist.
     if (typeof document !== 'undefined') {
       const updateFavicon = () => {
-        const favicon = document.getElementById('favicon') as HTMLLinkElement | null
+        const favicon = document.querySelector<HTMLLinkElement>('link[rel="icon"]')
         if (!favicon) return
-        favicon.href = document.documentElement.classList.contains('dark')
+        const href = document.documentElement.classList.contains('dark')
           ? '/logo_larx_dark.png'
           : '/logo_larx.png'
+        if (favicon.getAttribute('href') !== href) favicon.href = href
       }
+      // Fires when the user toggles light/dark mode.
       new MutationObserver(updateFavicon).observe(document.documentElement, {
         attributes: true,
         attributeFilter: ['class'],
+      })
+      // VitePress re-creates config-defined head tags on every client-side
+      // route change, replacing our mutated favicon with the default one.
+      // Watching <head> lets us re-apply the correct href right away.
+      new MutationObserver(updateFavicon).observe(document.head, {
+        childList: true,
       })
       updateFavicon()
     }

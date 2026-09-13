@@ -135,6 +135,7 @@
  * -------------------------------------------------------------------------- */
 
 :root {
+  
   --vp-c-bg: #ffffff;
   --vp-c-bg-alt: #f6f6f7;
   --vp-c-bg-elv: #ffffff;
@@ -497,28 +498,48 @@
  * -------------------------------------------------------------------------- */
 
 :root {
-  --vp-nav-height: 4rem;
-  --vp-nav-bg-color: var(--vp-c-bg);
+  --vp-nav-height: 5rem;
+  /* --vp-nav-bg-color: var(--vp-c-orange-3); */
 
   /**
    * Background while on top of the home page (unscrolled). Set it to
    * var(--vp-nav-bg-color) to opt out of the transparent treatment.
    */
-  --vp-nav-home-bg-color: transparent;
+ /*  --vp-nav-home-bg-color: transparent; */
 
   /**
    * Applied to the navbar surface, e.g. `saturate(180%) blur(8px)` combined
    * with a translucent --vp-nav-bg-color for a frosted-glass bar.
    */
-  --vp-nav-backdrop-filter: none;
+ /*  --vp-nav-backdrop-filter: none; */
+
+  /* --vp-nav-bg-color: color-mix(in srgb, var(--vp-c-bg) 85%, transparent);
+  --vp-nav-backdrop-filter: saturate(180%) blur(18px); */
 
   --vp-nav-divider-color: var(--vp-c-gutter);
   --vp-nav-screen-bg-color: var(--vp-c-bg);
-  --vp-nav-logo-height: 1.5rem;
+  --vp-nav-logo-height: 2rem;
+  --vp-nav-bg-color: color-mix(in srgb, var(--vp-c-bg) 85%, transparent);
+  --vp-nav-backdrop-filter: saturate(180%) blur(80px);
 }
 
 .hide-nav {
   --vp-nav-height: 0px;
+}
+
+.VPNavBar {
+  /* background: rgba(255, 255, 255, 0.1); */
+  
+  
+  /* Stronger blur with saturation boost */
+  -webkit-backdrop-filter: blur(24px) saturate(120%);
+  backdrop-filter: blur(6px) saturate(180%);
+  
+  /* Inner light rim and outer shadow */
+  /* box-shadow: 
+    inset 0 1px 0 rgba(255, 255, 255, 0.5),
+    inset 0 -1px 0 rgba(255, 255, 255, 0.15),
+    0 34px 70px -32px rgba(0, 0, 0, 0.7); */
 }
 
 .custom-navbar-title {
