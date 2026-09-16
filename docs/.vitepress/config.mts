@@ -11,18 +11,6 @@ export default defineConfig({
   head: [
     ['link', { rel: 'icon', id: 'favicon', href: '/logo_larx.png' }],
   ],
-  /* vite: {
-    resolve: {
-      alias: [
-        {
-          find: /^.*\/VPNavBarTitle\.vue$/,
-          replacement: fileURLToPath(
-            new URL('./theme/components/VPNavBarTitle.vue', import.meta.url)
-          )
-        }
-      ]
-    }
-  }, */
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     logo: {
@@ -55,15 +43,30 @@ export default defineConfig({
 
     sidebar: [
       {
-        text: 'Guide',
+        text: 'Quick Start',
+        collapsed: false,
         items: [
           /* { text: 'Markdown Examples', link: '/markdown-examples' },
           { text: 'Runtime API Examples', link: '/api-examples' }, */
-          { text: 'Dossier Actions', link: '/dossier_actions' },
-          { text: 'Client Actions', link: '/client_actions' },
-          { text: 'Lawyer Actions', link: '/lawyer_actions' },
-          { text: 'Representative Actions', link: '/representative_actions' },
-          { text: 'Firm Actions', link: '/firm_actions' },
+          { text: 'Create Dossier', link: '/create_dossier' },
+          { text: 'Create Client', link: '/create_client' },
+          { text: 'Create Lawyer', link: '/create_lawyer' },
+          { text: 'Create Representative', link: '/create_representative' },
+          { text: 'Create Firm', link: '/create_firm' },
+          
+        ]
+      },
+      {
+        text: 'Guide',
+        collapsed: false,
+        items: [
+          /* { text: 'Markdown Examples', link: '/markdown-examples' },
+          { text: 'Runtime API Examples', link: '/api-examples' }, */
+          { text: 'Manage Dossier', link: '/dossier_actions' },
+          { text: 'Manage Client', link: '/client_actions' },
+          { text: 'Manage Lawyer', link: '/lawyer_actions' },
+          { text: 'Manage Representative', link: '/representative_actions' },
+          { text: 'Manage Firm', link: '/firm_actions' },
           
         ]
       }
