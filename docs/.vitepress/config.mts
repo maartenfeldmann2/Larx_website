@@ -43,30 +43,16 @@ export default defineConfig({
 
     sidebar: [
       {
-        text: 'Quick Start',
-        collapsed: false,
-        items: [
-          /* { text: 'Markdown Examples', link: '/markdown-examples' },
-          { text: 'Runtime API Examples', link: '/api-examples' }, */
-          { text: 'Create Dossier', link: '/create_dossier' },
-          { text: 'Create Client', link: '/create_client' },
-          { text: 'Create Lawyer', link: '/create_lawyer' },
-          { text: 'Create Representative', link: '/create_representative' },
-          { text: 'Create Firm', link: '/create_firm' },
-          
-        ]
-      },
-      {
         text: 'Guide',
         collapsed: false,
         items: [
           /* { text: 'Markdown Examples', link: '/markdown-examples' },
           { text: 'Runtime API Examples', link: '/api-examples' }, */
-          { text: 'Manage Dossier', link: '/dossier_actions' },
-          { text: 'Manage Client', link: '/client_actions' },
-          { text: 'Manage Lawyer', link: '/lawyer_actions' },
-          { text: 'Manage Representative', link: '/representative_actions' },
-          { text: 'Manage Firm', link: '/firm_actions' },
+          { text: 'Dossier Management', link: '/dossier_actions' },
+          { text: 'Client Management', link: '/client_actions' },
+          { text: 'Lawyer Management', link: '/lawyer_actions' },
+          { text: 'Representative Management', link: '/representative_actions' },
+          { text: 'Firm Management', link: '/firm_actions' },
           
         ]
       }
