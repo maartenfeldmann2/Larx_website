@@ -5,7 +5,19 @@ import { fileURLToPath, URL } from 'node:url'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-
+// Vite configuration for aliasing VPHomeHero component. VPHomeHero in node_modules will be replaced by the local theme components directory.
+  vite: {
+    resolve: {
+      alias: [
+        {
+          find: /^.*\/VPHomeHero\.vue$/,
+          replacement: fileURLToPath(
+            new URL('./theme/components/VPHomeHero.vue', import.meta.url)
+          )
+        }
+      ]
+    }
+  },
   title: "Larx Legal",
   description: "Secure Client Collaboration Platform",
   head: [
@@ -57,6 +69,7 @@ export default defineConfig({
         ]
       }
     ],
+    
 
     socialLinks: [
       { icon: 'github', link: 'https://github.com/vuejs/vitepress' }
@@ -69,5 +82,6 @@ export default defineConfig({
 
     
   }
+  
 })
 

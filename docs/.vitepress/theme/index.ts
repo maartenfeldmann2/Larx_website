@@ -11,6 +11,8 @@ import DossierManagement from './components/Nav/DossierManagement.vue'
 
 import './style.css'
 
+
+
 export default {
   extends: DefaultTheme,
   enhanceApp({ app }) {
