@@ -14,6 +14,12 @@ export default defineConfig({
           replacement: fileURLToPath(
             new URL('./theme/components/VPHomeHero.vue', import.meta.url)
           )
+        },
+        {
+          find: /^.*\/VPNav\.vue$/,
+          replacement: fileURLToPath(
+            new URL('./theme/components/VPNav.vue', import.meta.url)
+          )
         }
       ]
     }

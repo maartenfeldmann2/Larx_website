@@ -4,8 +4,8 @@ layout: home
 
 hero:
   name: "Larx Legal"
-  text: "The collaboration platform for small law firms"
-  tagline: Share files, collaborate on cases and manage clients — all in one secure place, built for legal work.
+  text: "Collaboration for law firms"
+  tagline: Improve collaboration with your client and win.
   actions:
     - theme: brand
       text: Book a demo
@@ -14,26 +14,15 @@ hero:
       text: Explore features
       link: /features
 
-features:
-  - icon: 📁
-    title: Filesharing
-    details: Share documents securely with clients and colleagues, with full control over who sees what.
-    link: /filesharing
-    linkText: Find out more
-  - icon: 🤝
-    title: Collaboration
-    details: Chat, notes and agenda per dossier — firm and client working from one source of truth.
-    link: /collaboration
-    linkText: Find out more
-  - icon: 👥
-    title: Client management
-    details: Full control over clients, teams and dossier access — managed from one secure dashboard.
-    link: /client-management
-    linkText: Find out more
 ---
 
+
+
+
+
 <!-- ===== Social proof / logo strip ===== -->
-<section class="lx-section lx-logos">
+
+<!-- <section class="lx-section lx-logos">
   <p class="lx-social-proof">Trusted by small law firms across the Netherlands</p>
   <div class="lx-logo-strip">
     <span class="lx-logo-placeholder">Client logo</span>
@@ -43,7 +32,8 @@ features:
     <span class="lx-logo-placeholder">Client logo</span>
     <span class="lx-logo-placeholder">Client logo</span>
   </div>
-</section>
+</section> -->
+
 
 <!-- ===== Feature showcase: alternating two-column blocks ===== -->
 <section class="lx-section">
@@ -54,14 +44,14 @@ features:
 
   <div class="lx-showcase">
     <div class="lx-showcase-text">
-      <h3>Filesharing</h3>
-      <div class="lx-mini-feature">
-        <h4>Secure by default</h4>
-        <p>Every document is encrypted and access-controlled. No more sensitive files in email attachments.</p>
-      </div>
+      <h3>Client portal</h3>
       <div class="lx-mini-feature">
         <h4>Client portal</h4>
-        <p>Clients upload and download their documents in a branded portal — onboarding takes one email.</p>
+        <p>Clients upload and download their documents in a branded portal when, and from where they like — onboarding takes one email.</p>
+      </div>
+      <div class="lx-mini-feature">
+        <h4>Full access control</h4>
+        <p>The firm decides who has access to which dossier — clients can't add or remove people themselves.</p>
       </div>
       <div class="lx-mini-feature">
         <h4>Version history</h4>
@@ -74,14 +64,14 @@ features:
 
   <div class="lx-showcase lx-showcase--reverse">
     <div class="lx-showcase-text">
-      <h3>Collaboration</h3>
+      <h3>Document Management</h3>
       <div class="lx-mini-feature">
         <h4>One dossier per case</h4>
         <p>Chat, documents, notes and agenda together in one secure dossier — the single source of truth for firm and client.</p>
       </div>
       <div class="lx-mini-feature">
-        <h4>Chat like WhatsApp</h4>
-        <p>Group chat with everyone involved, or private one-on-one — with rich text, shared documents and read receipts.</p>
+        <h4>One management dashboard</h4>
+        <p>Manage clients, teams and dossiers from one secure place, with every action logged.</p>
       </div>
       <div class="lx-mini-feature">
         <h4>Always in the loop</h4>
@@ -94,10 +84,34 @@ features:
 
   <div class="lx-showcase">
     <div class="lx-showcase-text">
+      <h3>Collaboration</h3>
+      <div class="lx-mini-feature">
+        <h4>Full access control</h4>
+        <p>The firm decides who has access to which dossier — clients can't add or remove people themselves.</p>
+      </div>
+      <div class="lx-mini-feature">
+        <h4>Chat like WhatsApp</h4>
+        <p>Group chat with everyone involved, or private one-on-one — with rich text, shared documents and read receipts.</p>
+      </div>
+      <div class="lx-mini-feature">
+        <h4>Always in the loop</h4>
+        <p>Email and push notifications on every update, and unread counters that take you straight to what's new.</p>
+      </div>
+      <a class="lx-link" href="/client-management">Find out more →</a>
+    </div>
+    <div class="lx-showcase-image">Screenshot placeholder</div>
+  </div>
+  
+  <div class="lx-showcase lx-showcase--reverse">
+    <div class="lx-showcase-text">
       <h3>Client management</h3>
       <div class="lx-mini-feature">
         <h4>Full access control</h4>
         <p>The firm decides who has access to which dossier — clients can't add or remove people themselves.</p>
+      </div>
+      <div class="lx-mini-feature">
+        <h4>The relationship in one place</h4>
+        <p>Contracts, invoices and client profiles — including industry and legal areas, ready for targeted marketing.</p>
       </div>
       <div class="lx-mini-feature">
         <h4>One management dashboard</h4>
@@ -111,6 +125,43 @@ features:
     </div>
     <div class="lx-showcase-image">Screenshot placeholder</div>
   </div>
+
+  <div class="lx-showcase">
+    <div class="lx-showcase-text">
+      <h3>Marketing Management Engine</h3>
+      <div class="lx-mini-feature">
+        <h4>The relationship in one place</h4>
+        <p>Contracts, invoices and client profiles — including industry and legal areas, ready for targeted marketing.</p>
+      </div>
+      <div class="lx-mini-feature">
+        <h4>One management dashboard</h4>
+        <p>Manage clients, teams and dossiers from one secure place, with every action logged.</p>
+      </div>
+      <div class="lx-mini-feature">
+        <h4>The relationship in one place</h4>
+        <p>Contracts, invoices and client profiles — including industry and legal areas, ready for targeted marketing.</p>
+      </div>
+      <a class="lx-link" href="/client-management">Find out more →</a>
+    </div>
+    <div class="lx-showcase-image">Screenshot placeholder</div>
+  </div>
+
+  <div class="lx-showcase lx-showcase--reverse">
+    <div class="lx-showcase-text">
+      <h3>Secure</h3>
+      <div class="lx-mini-feature">
+        <h4>Secure by default</h4>
+        <p>Every document is encrypted and access-controlled. No more sensitive files in email attachments.</p>
+      </div>
+      <div class="lx-mini-feature">
+        <h4>Full access control</h4>
+        <p>The firm decides who has access to which dossier — clients can't add or remove people themselves.</p>
+      </div>
+      <a class="lx-link" href="/client-management">Find out more →</a>
+    </div>
+    <div class="lx-showcase-image">Screenshot placeholder</div>
+  </div>
+
 </section>
 
 <!-- ===== Announcement / spotlight banner ===== -->
@@ -158,7 +209,7 @@ features:
 </section>
 
 <!-- ===== Testimonials ===== -->
-<section class="lx-section">
+<!-- <section class="lx-section">
   <div class="lx-section-head">
     <h2>What our customers say</h2>
     <p>Law firms of all kinds use Larx every day. Here's what they think.</p>
@@ -194,12 +245,12 @@ features:
     </a>
   </div>
   <p class="lx-section-foot"><a class="lx-link" href="/about">Read all success stories →</a></p>
-</section>
+</section> -->
 
 <!-- ===== Why choose Larx ===== -->
 <section class="lx-section">
   <div class="lx-section-head">
-    <h2>Why law firms choose Larx</h2>
+    <h2>Why you should choose Larx</h2>
   </div>
   <div class="lx-grid lx-grid--4 lx-why">
     <div>

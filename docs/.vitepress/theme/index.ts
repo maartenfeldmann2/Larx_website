@@ -7,6 +7,7 @@ import Filesharing from './components/Nav/Filesharing.vue'
 import Collaboration from './components/Nav/Collaboration.vue'
 import ClientManagement from './components/Nav/ClientManagement.vue'
 import DossierManagement from './components/Nav/DossierManagement.vue'
+import Features from './components/Hero/Features.vue'
 
 
 import './style.css'
@@ -14,6 +15,7 @@ import './style.css'
 
 
 export default {
+  
   extends: DefaultTheme,
   enhanceApp({ app }) {
     app.component('FeaturesMenu', FeaturesMenu)
@@ -21,6 +23,7 @@ export default {
     app.component('Collaboration', Collaboration)
     app.component('ClientManagement', ClientManagement)
     app.component('DossierManagement', DossierManagement)
+    app.component('Features', Features)
   
 
     // Swap the favicon when the theme toggles. Guarded because this file
@@ -48,6 +51,7 @@ export default {
       updateFavicon()
     }
   },
+  
 
   
 } satisfies Theme

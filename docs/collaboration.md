@@ -1,18 +1,6 @@
 ---
-layout: home
+layout: page
 title: Collaboration
-
-hero:
-  name: "Collaboration"
-  text: "One dossier. Everyone on the same page."
-  tagline: Chat, notes, documents and agenda — everything about a legal case lives in one secure dossier, shared by your firm and your client. No more scattered emails, no more "who knows what?"
-  actions:
-    - theme: brand
-      text: Book a demo
-      link: /about
-    - theme: alt
-      text: All features
-      link: /features
 ---
 
 <!-- ===== Hero screenshot ===== -->

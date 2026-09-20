@@ -1,18 +1,5 @@
 ---
-layout: home
-title: Filesharing
-
-hero:
-  name: "Filesharing"
-  text: "Share legal documents without the risk"
-  tagline: Stop emailing confidential files. Larx gives your firm and your clients one secure place to exchange, organise and track every document in a case.
-  actions:
-    - theme: brand
-      text: Book a demo
-      link: /about
-    - theme: alt
-      text: All features
-      link: /features
+layout: page
 ---
 
 <!-- ===== Hero screenshot ===== -->

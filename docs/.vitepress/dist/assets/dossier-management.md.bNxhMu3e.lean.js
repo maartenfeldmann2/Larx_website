@@ -1,1 +1,0 @@
-import{_ as e,o as t,c as a}from"./chunks/framework.CShDTZbC.js";const _=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"dossier-management.md","filePath":"dossier-management.md"}'),s={name:"dossier-management.md"};function n(r,o,m,c,d,i){return t(),a("div")}const f=e(s,[["render",n]]);export{_ as __pageData,f as default};

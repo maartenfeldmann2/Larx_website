@@ -1,13 +1,13 @@
 # Client Management
 ## General
 Larx is a secure Software as a Service (SaaS) platform designed to streamline the relationship between your law firm and your clients. Far more than just a branded client portal, Larx serves as your central document management system and a dynamic environment where lawyers and clients collaborate seamlessly. It acts as a secure, trusted pillar supporting your firm's digital presence.
-##### Client PortalYour 
+##### Your Client Portal 
 clients gain access to a personalized, secure, and controlled online dashboard where they can view their assigned dossiers. Files can be uploaded to a dossier at any time, from any location, by any authorized user, ensuring smooth and immediate information sharing.
 ##### Document Management System
 Dossiers can be managed completely from a single, centralized interface. Firm administrators can grant or revoke access rights to any dossier on the fly, create or remove dossiers, and manage client profiles. Whenever a dossier is updated, all authorized participants automatically receive an email notification to keep everyone aligned.
 ##### Collaboration Environment
 Dossiers in Larx are more than just static data repositories; they are active communication channels. Authorized participants can securely discuss case details, facts, and updates directly within the built-in dossier chat module. By adding immediate context and collaborating in real time, teams can work efficiently toward the best possible legal outcome. The dossier becomes the single source of truth for both your firm and your clients, where files and context live under one roof.
-##### Centralized Communication
+##### Marketing Management Engine
 Larx allows your firm to gather and organize valuable information about your clients' profiles. Based on these collected insights, you can manage targeted email communications. This enables you to reach specific client segments with personalized updates based on their industry sector or legal interests, helping you maintain strong client relationships and increase long-term retention.
 ##### Secure and Trusted Environment
 Your firm's client environment is entirely controlled by you. You dictate exactly who has access to which dossier, and permissions can be modified instantly at any time. Furthermore, all dossier updates are centrally logged, providing a clear audit trail so you always know who modified a file or adjusted a setting.

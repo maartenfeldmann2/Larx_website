@@ -1,0 +1,1 @@
+import{_ as e,o as t,c as a}from"./chunks/framework.BtvJJXVw.js";const i=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"features.md","filePath":"features.md"}'),r={name:"features.md"};function s(o,c,n,f,p,_){return t(),a("div")}const m=e(r,[["render",s]]);export{i as __pageData,m as default};
