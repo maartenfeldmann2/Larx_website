@@ -8,6 +8,8 @@ import Collaboration from './components/Nav/Collaboration.vue'
 import ClientManagement from './components/Nav/ClientManagement.vue'
 import DossierManagement from './components/Nav/DossierManagement.vue'
 import Features from './components/Hero/Features.vue'
+import Marketing from './components/Nav/Marketing.vue'
+import Security from './components/Nav/Security.vue'
 
 
 import './style.css'
@@ -23,7 +25,9 @@ export default {
     app.component('Collaboration', Collaboration)
     app.component('ClientManagement', ClientManagement)
     app.component('DossierManagement', DossierManagement)
+    app.component('Marketing', Marketing)
     app.component('Features', Features)
+    app.component('Security', Security)
   
 
     // Swap the favicon when the theme toggles. Guarded because this file

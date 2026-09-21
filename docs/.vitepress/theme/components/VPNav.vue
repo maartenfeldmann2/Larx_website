@@ -1,17 +1,44 @@
 <script setup lang="ts">
 import { inBrowser } from 'vitepress'
-import { computed, provide, watchEffect, onMounted, onUnmounted, ref, nextTick } from 'vue'
+import { computed, provide, watchEffect, onMounted, onUnmounted, ref, nextTick, watch } from 'vue'
 import { useData } from 'vitepress/dist/client/theme-default/composables/data.js'
 import { useNav } from 'vitepress/dist/client/theme-default/composables/nav.js'
 import VPNavBar from 'vitepress/dist/client/theme-default/components/VPNavBar.vue'
 import VPNavScreen from 'vitepress/dist/client/theme-default/components/VPNavScreen.vue'
+import { useRouter } from 'vitepress';
+
+const router = useRouter()
+let allNavbarElements = [];
+const isScrolled = ref(false);
+const isHome = ref(false);
+
+console.log('route', router.route.path)
+
+watch(
+    () => router.route.path,
+    () => {
+      if (router.route.path !== '/') {
+        isHome.value = false
+        handleScroll();
+        
+      } else {
+        isHome.value = true
+        handleScroll();
+       
+      }
+
+    }
+  );
 
 const { isScreenOpen, closeScreen, toggleScreen } = useNav()
 const { frontmatter } = useData()
 
-const isScrolled = ref(false);
 
-let allNavbarElements = [];
+
+
+/* console.log('isHome', isHome.value) */
+
+
 let isHtmlDarkMode = ref(false);
 let observer: MutationObserver | null = null;
 
@@ -20,7 +47,8 @@ const checkDarkMode = () => {
 };
 
 const handleScroll = () => {
-
+      // in case of dark mode and on home page, recoloring of elements in nav to black is required because of white background image and the fact that the nav has no color if no scroll, so standard white color cannot be used in case there is no scroll and on home page. If no scroll, color must be black. however, as soon there is a scroll, the background can turn to white, as the background of the nav turns to black, so that in all scenarios there is enough contrast. On all other pages, normal white color for darkmode is applicable. 
+      
       if (isHtmlDarkMode.value) {
         // If the array is empty (elements weren't found), don't run
         if (allNavbarElements.length === 0) return;
@@ -29,8 +57,11 @@ const handleScroll = () => {
 
         // Determine if we are scrolled down
         if (currentScroll > 0) {
+          // i.e. user scrolled
+          console.log('isHome', isHome.value)
           if (!isScrolled.value) {
             isScrolled.value = true
+             
 
 
             // Loop through all 5 elements and set them to white
@@ -44,12 +75,26 @@ const handleScroll = () => {
         } else {
           if (isScrolled.value) {
             isScrolled.value = false;
-
+            // user is on top of page
             // Loop through all 5 elements and set them back to black
-            allNavbarElements.forEach(el => {
-              el.style.setProperty('color', 'black', 'important');
-            });
-            console.log('All elements changed to: black');
+            if (isHome.value) {
+              // if on home page
+              allNavbarElements.forEach(el => {
+                el.style.setProperty('color', 'white', 'important');
+              });
+              console.log('All elements changed to: black');
+
+            } else {
+               // if not on home page
+                allNavbarElements.forEach(el => {
+                  el.style.setProperty('color', 'white', 'important');
+                });
+                console.log('All elements changed to: white');
+
+            }
+            
+
+
           }
         }
       } else {
@@ -62,6 +107,7 @@ const handleScroll = () => {
 };
 
 onMounted(async () => {
+  
   await nextTick();
 
   // Watch for class changes on <html>. Runs in onMounted because `document`
@@ -80,9 +126,16 @@ onMounted(async () => {
 
   console.log('isHtmlDarkMode:', isHtmlDarkMode.value);
 
-  if (isHtmlDarkMode.value) {
+
+
+  if (isHtmlDarkMode.value && isHome.value) {
     allNavbarElements.forEach(el => {
-      el.style.setProperty('color', 'black', 'important');
+      el.style.setProperty('color', 'white', 'important');
+      
+    });
+  } else if (isHtmlDarkMode.value && !isHome.value) {
+      allNavbarElements.forEach(el => {
+      el.style.setProperty('color', 'white', 'important');
       
     });
   }
@@ -98,6 +151,7 @@ onMounted(async () => {
   // Listen to scrolling events
   window.addEventListener('scroll', handleScroll, { passive: true });
   document.addEventListener('scroll', handleScroll, { capture: true, passive: true });
+  
 });
 
 onUnmounted(() => {

@@ -43,14 +43,21 @@ export default defineConfig({
             component: 'Filesharing'
           },
           { 
+            component: 'DossierManagement'
+          },
+          { 
             component: 'Collaboration'
           },
           { 
             component: 'ClientManagement'
           },
           { 
-            component: 'DossierManagement'
+            component: 'Marketing'
           },
+          { 
+            component: 'Security'
+          },
+          
         ]
       },
       { text: 'Guide', link: '/guide' },

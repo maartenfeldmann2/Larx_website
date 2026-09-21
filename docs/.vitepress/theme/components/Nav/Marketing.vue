@@ -3,7 +3,7 @@ import { withBase } from 'vitepress'
 </script>
 
 <template>
-  <a class="feature-item" :href="withBase('/collaboration')">
+  <a class="feature-item" :href="withBase('/marketing')">
     <div class="feature-icon">
       <!-- "files" icon from simple-icons -->
       <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
@@ -14,9 +14,9 @@ import { withBase } from 'vitepress'
       </svg>
     </div>
     <div class="feature-text">
-      <span class="feature-title">Collaboration Environment</span>
+      <span class="feature-title">Marketing Management Engine</span>
       <span class="feature-description">
-        Collaborate effectively with team members in real-time
+        Target clients based on your own specifications without effort
       </span>
     </div>
   </a>

@@ -5,9 +5,9 @@ import { useData } from 'vitepress/dist/client/theme-default/composables/data.js
 import { onMounted, onUnmounted, ref, nextTick, watchEffect, watch, computed } from 'vue';
 
 const { frontmatter: fm } = useData()
-const isScrolled = ref(false);
+/* const isScrolled = ref(false); */
 // Store all elements in an array
-let allNavbarElements = [];
+/* let allNavbarElements = []; */
 let isHtmlDarkMode = ref(false);
 let observer: MutationObserver | null = null;
 let iconColor = ref('orange');
@@ -29,7 +29,7 @@ watch(isHtmlDarkMode, (newVal) => {
   }
 });
 
-const handleScroll = () => {
+/* const handleScroll = () => {
 
       if (isHtmlDarkMode.value) {
         // If the array is empty (elements weren't found), don't run
@@ -69,7 +69,7 @@ const handleScroll = () => {
         });
         console.log('All elements changed to: black');
       }
-};
+}; */
 
 onMounted(async () => {
   await nextTick();
@@ -80,17 +80,17 @@ onMounted(async () => {
   observer.observe(document.documentElement, { attributes: true, attributeFilter: ['class'] });
   checkDarkMode();
 
-  // 1. Gather elements from both selectors
+  /* // 1. Gather elements from both selectors
   const groupA = document.querySelectorAll('nav a span');
   const individualEl = document.querySelector('a span');
   const individualEl2 = document.querySelector('div button span');
 
   // 2. Combine them into a single Array, using a Set to filter out duplicates
-  allNavbarElements = Array.from(new Set([...groupA, individualEl, individualEl2].filter(Boolean)));
+  allNavbarElements = Array.from(new Set([...groupA, individualEl, individualEl2].filter(Boolean))); */
 
   console.log('isHtmlDarkMode:', isHtmlDarkMode.value);
 
-  if (isHtmlDarkMode.value) {
+  /* if (isHtmlDarkMode.value) {
     allNavbarElements.forEach(el => {
       el.style.setProperty('color', 'black', 'important');
       iconColor.value = 'orange';
@@ -107,13 +107,13 @@ onMounted(async () => {
 
   // Listen to scrolling events
   window.addEventListener('scroll', handleScroll, { passive: true });
-  document.addEventListener('scroll', handleScroll, { capture: true, passive: true });
+  document.addEventListener('scroll', handleScroll, { capture: true, passive: true }); */
 });
 
 onUnmounted(() => {
   observer?.disconnect();
-  window.removeEventListener('scroll', handleScroll);
-  document.removeEventListener('scroll', handleScroll, { capture: true });
+  /* window.removeEventListener('scroll', handleScroll);
+  document.removeEventListener('scroll', handleScroll, { capture: true }); */
 });
 
 
@@ -179,7 +179,7 @@ onUnmounted(() => {
                   <path d="M3 3.5A1.5 1.5 0 0 1 4.5 2h6.879a1.5 1.5 0 0 1 1.06.44l4.122 4.12A1.5 1.5 0 0 1 17 7.622V16.5a1.5 1.5 0 0 1-1.5 1.5h-11A1.5 1.5 0 0 1 3 16.5v-13Z" />
                   </svg>
                 </div>
-                <h2 class="hero-feature-title">Document Management</h2>
+                <h2 class="hero-feature-title">Document Management System</h2>
                 <p class="hero-feature-details">Managem dossiers per client and allow only access to designated trusted persons.</p>
                 <p class="hero-feature-link">Find out more →</p>
                 

@@ -3,7 +3,7 @@ import { withBase } from 'vitepress'
 </script>
 
 <template>
-  <a class="feature-item" :href="withBase('/collaboration')">
+  <a class="feature-item" :href="withBase('/security')">
     <div class="feature-icon">
       <!-- "files" icon from simple-icons -->
       <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
@@ -14,9 +14,9 @@ import { withBase } from 'vitepress'
       </svg>
     </div>
     <div class="feature-text">
-      <span class="feature-title">Collaboration Environment</span>
+      <span class="feature-title">Secure</span>
       <span class="feature-description">
-        Collaborate effectively with team members in real-time
+        Work in a secure environment
       </span>
     </div>
   </a>

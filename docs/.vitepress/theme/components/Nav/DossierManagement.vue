@@ -14,7 +14,7 @@ import { withBase } from 'vitepress'
       </svg>
     </div>
     <div class="feature-text">
-      <span class="feature-title">Dossier Management</span>
+      <span class="feature-title">Document Management System</span>
       <span class="feature-description">
         Manage and organize client dossiers efficiently
       </span>
