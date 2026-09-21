@@ -36,6 +36,7 @@ import {
   watch,
   watchEffect
 } from "./chunk-UEFGQ2CT.js";
+import "./chunk-V6TY7KAL.js";
 
 // node_modules/vitepress/node_modules/@vueuse/shared/index.mjs
 function computedEager(fn, options) {

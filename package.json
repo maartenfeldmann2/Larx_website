@@ -12,6 +12,7 @@
   "dependencies": {
     "@tailwindcss/postcss": "^4.3.3",
     "class-variance-authority": "^0.7.1",
+    "pinia": "^4.0.3",
     "reka-ui": "^2.10.4",
     "shadcn-ui": "^0.9.5",
     "tailwindcss": "^4.3.3"

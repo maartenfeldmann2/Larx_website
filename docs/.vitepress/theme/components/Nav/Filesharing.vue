@@ -1,11 +1,15 @@
 <script setup lang="ts">
 import { withBase } from 'vitepress'
 import { onMounted, onUnmounted, ref, nextTick } from 'vue';
+import { useStore } from '../../stores/larx'
 
+const store = useStore();
 let isHtmlDarkMode = ref(false);
 let observer: MutationObserver | null = null;
 let iconColorNight = ref('#c16200');
 let iconColorDay = ref('#9a4224');
+
+console.log('store darkmode value in filesharing', store.darkMode)
 
 const checkDarkMode = () => {
   isHtmlDarkMode.value = document.documentElement.classList.contains('dark');

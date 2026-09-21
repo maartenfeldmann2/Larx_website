@@ -10,6 +10,8 @@ import DossierManagement from './components/Nav/DossierManagement.vue'
 import Features from './components/Hero/Features.vue'
 import Marketing from './components/Nav/Marketing.vue'
 import Security from './components/Nav/Security.vue'
+import { createPinia } from 'pinia';
+
 
 
 import './style.css'
@@ -51,10 +53,13 @@ export default {
       // Watching <head> lets us re-apply the correct href right away.
       new MutationObserver(updateFavicon).observe(document.head, {
         childList: true,
-      })
-      updateFavicon()
+      });
+      updateFavicon();
+      const pinia = createPinia();
+      app.use(pinia);
     }
   },
+  
   
 
   

@@ -3,8 +3,10 @@
 import { withBase } from 'vitepress'
 import { useData } from 'vitepress/dist/client/theme-default/composables/data.js'
 import { onMounted, onUnmounted, ref, nextTick, watchEffect, watch, computed } from 'vue';
+import { useStore } from '../stores/larx'
 
 const { frontmatter: fm } = useData()
+const store = useStore()
 /* const isScrolled = ref(false); */
 // Store all elements in an array
 /* let allNavbarElements = []; */
@@ -18,6 +20,7 @@ let iconColorBackgroundNight = ref('rgba(0, 0, 0, 0.2)');
 
 const checkDarkMode = () => {
   isHtmlDarkMode.value = document.documentElement.classList.contains('dark');
+  store.setDarkMode(false);
 };
 
 // watch status of HTML dark mode class
