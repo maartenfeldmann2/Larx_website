@@ -9,10 +9,26 @@ const { isDark } = useData()
 let iconColorNight = ref('#c16200');
 let iconColorDay = ref('#9a4224');
 
+function handleLinkClick(event) {
+  const dropdown = event.currentTarget.closest('.VPMenu')
+  
+  if (dropdown) {
+    // Hard hide the dropdown from the viewport immediately
+    dropdown.style.display = 'none'
+    
+    // Restore its native styling half a second later (after layout navigation settles)
+    setTimeout(() => {
+      dropdown.style.removeProperty('display')
+    }, 500)
+  }
+
+  if (closeScreen) closeScreen()
+}
+
 </script>
 
 <template>
-  <a class="feature-item" :href="withBase('/security')">
+  <a class="feature-item" :href="withBase('/security')" @click="handleLinkClick">
     <div class="feature-icon">
       <!-- "files" icon from simple-icons -->
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" :stroke="isDark ? iconColorNight : iconColorDay" class="size-6">

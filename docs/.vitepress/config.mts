@@ -10,6 +10,12 @@ export default defineConfig({
     resolve: {
       alias: [
         {
+          find: /^.*\/Layout\.vue$/,
+          replacement: fileURLToPath(
+            new URL('./theme/components/Layout.vue', import.meta.url)
+          )
+        },
+        {
           find: /^.*\/VPHomeHero\.vue$/,
           replacement: fileURLToPath(
             new URL('./theme/components/VPHomeHero.vue', import.meta.url)
@@ -20,7 +26,19 @@ export default defineConfig({
           replacement: fileURLToPath(
             new URL('./theme/components/VPNav.vue', import.meta.url)
           )
-        }
+        },
+        /* {
+          find: /^.*\/VPFlyout\.vue$/,
+          replacement: fileURLToPath(
+            new URL('./theme/components/VPFlyout.vue', import.meta.url)
+          )
+        },
+        {
+          find: /^.*\/VPNavBarTranslations\.vue$/,
+          replacement: fileURLToPath(
+            new URL('./theme/components/VPNavBarTranslations.vue', import.meta.url)
+          )
+        }, */
       ]
     }
   },
@@ -32,8 +50,8 @@ export default defineConfig({
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     logo: {
-      light: '/logo_larx.png',
-      dark: '/logo_larx_dark.png'
+      light: '/Logo/logo_larx.png',
+      dark: '/Logo/logo_larx_dark.png'
     },
     nav: [
       { text: 'Home', link: '/' },
@@ -65,7 +83,7 @@ export default defineConfig({
       /* { text: 'Examples', link: '/markdown-examples' },
       { text: 'About', link: '/about' } */
     ],
-
+    // conditionally show sidebar based on route
     sidebar: [
       {
         text: 'Guide',

@@ -1,5 +1,7 @@
 ---
 layout: page
+hideSidebar: true
+
 ---
 
 <!-- ===== Hero screenshot ===== -->

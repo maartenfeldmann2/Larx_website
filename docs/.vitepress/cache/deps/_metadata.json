@@ -1,37 +1,37 @@
 {
-  "hash": "4e2adb6b",
-  "configHash": "a62417bd",
+  "hash": "e0e4fe1c",
+  "configHash": "74cc7999",
   "lockfileHash": "e61430fd",
-  "browserHash": "98764bee",
+  "browserHash": "8fed2018",
   "optimized": {
     "vue": {
       "src": "../../../../node_modules/vue/dist/vue.runtime.esm-bundler.js",
       "file": "vue.js",
-      "fileHash": "dde27304",
+      "fileHash": "288acd00",
       "needsInterop": false
     },
     "vitepress > @vue/devtools-api": {
-      "src": "../../../../node_modules/@vue/devtools-api/dist/index.js",
+      "src": "../../../../node_modules/vitepress/node_modules/@vue/devtools-api/dist/index.js",
       "file": "vitepress___@vue_devtools-api.js",
-      "fileHash": "56734d0f",
+      "fileHash": "f86a5f87",
       "needsInterop": false
     },
     "vitepress > @vueuse/core": {
       "src": "../../../../node_modules/vitepress/node_modules/@vueuse/core/index.mjs",
       "file": "vitepress___@vueuse_core.js",
-      "fileHash": "dec17786",
+      "fileHash": "08d73aab",
       "needsInterop": false
     },
     "pinia": {
       "src": "../../../../node_modules/pinia/dist/pinia.js",
       "file": "pinia.js",
-      "fileHash": "39efb9e7",
+      "fileHash": "7a199006",
       "needsInterop": false
     }
   },
   "chunks": {
-    "chunk-6XXSI4UJ": {
-      "file": "chunk-6XXSI4UJ.js"
+    "chunk-IIQZHHRC": {
+      "file": "chunk-IIQZHHRC.js"
     },
     "chunk-UEFGQ2CT": {
       "file": "chunk-UEFGQ2CT.js"

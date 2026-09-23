@@ -1,6 +1,7 @@
 // https://vitepress.dev/guide/custom-theme
 import { h } from 'vue'
 import type { Theme } from 'vitepress'
+import Home from './components/Pages/Home.vue'
 import DefaultTheme from 'vitepress/theme'
 import FeaturesMenu from './components/FeaturesMenu.vue'
 import Filesharing from './components/Nav/Filesharing.vue'
@@ -30,6 +31,7 @@ export default {
     app.component('Marketing', Marketing)
     app.component('Features', Features)
     app.component('Security', Security)
+    app.component('Home', Home)
   
 
     // Swap the favicon when the theme toggles. Guarded because this file
@@ -39,8 +41,8 @@ export default {
         const favicon = document.querySelector<HTMLLinkElement>('link[rel="icon"]')
         if (!favicon) return
         const href = document.documentElement.classList.contains('dark')
-          ? '/logo_larx_dark.png'
-          : '/logo_larx.png'
+          ? '/Logo/logo_larx_dark.png'
+          : '/Logo/logo_larx.png'
         if (favicon.getAttribute('href') !== href) favicon.href = href
       }
       // Fires when the user toggles light/dark mode.

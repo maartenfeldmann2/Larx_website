@@ -791,10 +791,14 @@
   justify-content: center;
   min-height: 260px;
   border-radius: 12px;
-  background: var(--vp-c-bg-soft);
-  border: 1px dashed var(--vp-c-divider);
+  background-repeat: no-repeat;
+  /* background: var(--vp-c-bg-soft); */
+  /* border: 1px dashed var(--vp-c-divider); */
   color: var(--vp-c-text-3);
   font-size: 14px;
+  position: relative;
+  width: 100%; /* or specify a fixed width */
+  padding-top: 60%; /* 9/16 = 0.5625 or 56.25% for 16:9 aspect ratio */
 }
 
 .lx-card-image { min-height: 140px; margin-bottom: 12px; }

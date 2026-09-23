@@ -1,18 +1,57 @@
 <script setup lang="ts">
+import { inject } from 'vue'
 import { withBase } from 'vitepress'
 import { useData } from 'vitepress'
 import { ref } from 'vue';
+import { useNav } from 'vitepress/dist/client/theme-default/composables/nav.js'
 
 
 const { isDark } = useData()
 
+
+const { closeScreen: closeScreenFromNav } = useNav()
+const closeScreen = inject('close-screen')
+
+
+
 let iconColorNight = ref('#c16200');
 let iconColorDay = ref('#9a4224');
+
+/* function handleLinkClick(event) {
+  /
+  // 2. Desktop fix: Blur the <a> tag immediately on click to close desktop dropdowns
+  if (event.currentTarget) {
+    console.log('Link clicked, blurring the element.', event.currentTarget)
+    event.currentTarget.blur()
+  }
+
+  // 3. Mobile fix: Call VitePress's native screen closer if on a mobile view
+  if (closeScreen) {
+    console.log('Calling closeScreen()')
+    closeScreenFromNav()
+  }
+} */
+
+function handleLinkClick(event) {
+  const dropdown = event.currentTarget.closest('.VPMenu')
+  
+  if (dropdown) {
+    // Hard hide the dropdown from the viewport immediately
+    dropdown.style.display = 'none'
+    
+    // Restore its native styling half a second later (after layout navigation settles)
+    setTimeout(() => {
+      dropdown.style.removeProperty('display')
+    }, 500)
+  }
+
+  if (closeScreen) closeScreen()
+}
 
 </script>
 
 <template>
-  <a class="feature-item" :href="withBase('/dossier-management')">
+  <a class="feature-item" :href="withBase('/dossier-management')" @click="handleLinkClick">
     <div class="feature-icon">
       <!-- "files" icon from simple-icons -->
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" :fill="isDark ? iconColorNight : iconColorDay" class="size-5">
