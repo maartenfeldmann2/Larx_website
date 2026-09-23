@@ -1,0 +1,252 @@
+<script setup lang="ts">
+
+import { onMounted, onUnmounted, ref, nextTick, watch, watchEffect, computed } from 'vue';
+
+import { useData } from 'vitepress'
+
+
+const { isDark } = useData();
+
+const h2header = computed(() => {
+  const fontColor = isDark.value 
+    ? 'var(--vp-c-indigo-1)'
+    : 'var(--vp-c-indigo-3)'
+    
+  return {  textFillColor: fontColor,
+            
+  }
+})
+
+const hero = computed(() => {
+  const path = isDark.value 
+    ? '/images/DMS/Dark/hero.png' 
+    : '/images/DMS/Light/hero.png'
+    
+  return {  backgroundImage: `url(${path})`, 
+            backgroundSize: `100%`,
+            backgroundPosition: `50% 60%`,
+
+
+        }
+})
+
+
+// images urls
+
+
+</script>
+
+<template>
+    <section class="lx-section">
+        <div class="lx-section-head">
+                <h2 :style="h2header">Document Management System</h2>
+            </div>
+  <div class="lx-showcase-image" :style="hero"></div>
+</section>
+
+<!-- ===== The problem ===== -->
+<section class="lx-section">
+  <div class="lx-section-head">
+    <h2>Confidentiality starts with knowing who has access</h2>
+    <p>A law firm works with dozens of clients and constantly changing teams. Without central control, access management becomes guesswork — and guesswork is a liability.</p>
+  </div>
+  <div class="lx-grid lx-grid--4 lx-why">
+    <div>
+      <h4>Who has access?</h4>
+      <p>People join and leave cases all the time. Can you show, right now, exactly who can see which case?</p>
+    </div>
+    <div>
+      <h4>Offboarding risk</h4>
+      <p>A representative changes jobs — and keeps receiving case emails for months. It happens more than anyone admits.</p>
+    </div>
+    <div>
+      <h4>The relationship is scattered</h4>
+      <p>The engagement contract, the invoices, the terms — spread across mailboxes and network drives.</p>
+    </div>
+    <div>
+      <h4>Client knowledge unused</h4>
+      <p>You know each client's industry and legal needs — but that knowledge lives in people's heads, not in a system.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Capability 1: the management dashboard ===== -->
+<section class="lx-section">
+  <div class="lx-showcase">
+    <div class="lx-showcase-text">
+      <h3>One secure dashboard to run it all</h3>
+      <div class="lx-mini-feature">
+        <h4>Clients, people and dossiers</h4>
+        <p>The firm admin manages everything from one protected management environment: add clients, assign client representatives, and appoint a client admin as the main contact.</p>
+      </div>
+      <div class="lx-mini-feature">
+        <h4>The firm decides — full stop</h4>
+        <p>Access exists only for people your firm has assigned. Clients cannot add or remove people themselves, so control never leaves the firm.</p>
+      </div>
+      <div class="lx-mini-feature">
+        <h4>Everything logged</h4>
+        <p>Every action under a client's name is recorded, giving the firm admin a complete audit trail per client.</p>
+      </div>
+    </div>
+    <div class="lx-showcase-text">
+      <h3>Dossiers under control, from opening to archive</h3>
+      <div class="lx-mini-feature">
+        <h4>Create and staff dossiers</h4>
+        <p>Open a new dossier for any client and assign the right team — lawyers on your side, representatives on the client's side. Add or remove people at any moment.</p>
+      </div>
+      <div class="lx-mini-feature">
+        <h4>Open, frozen or closed</h4>
+        <p>The firm admin sets each dossier's status: active, frozen (read-only but still accessible) or closed. The lifecycle of every case is explicit.</p>
+      </div>
+      <div class="lx-mini-feature">
+        <h4>Teams of any size</h4>
+        <p>From one lawyer and one representative to a full team on both sides — and everyone in the dossier can see exactly who else has access.</p>
+      </div>
+    </div>
+    <!-- <div class="lx-showcase-image">Screenshot placeholder — client administration</div> -->
+  </div>
+
+  <!-- ===== Capability 2: dossier lifecycle & teams ===== -->
+  <!-- <div class="lx-showcase lx-showcase--reverse">
+    <div class="lx-showcase-text">
+      <h3>Dossiers under control, from opening to archive</h3>
+      <div class="lx-mini-feature">
+        <h4>Create and staff dossiers</h4>
+        <p>Open a new dossier for any client and assign the right team — lawyers on your side, representatives on the client's side. Add or remove people at any moment.</p>
+      </div>
+      <div class="lx-mini-feature">
+        <h4>Open, frozen or closed</h4>
+        <p>The firm admin sets each dossier's status: active, frozen (read-only but still accessible) or closed. The lifecycle of every case is explicit.</p>
+      </div>
+      <div class="lx-mini-feature">
+        <h4>Teams of any size</h4>
+        <p>From one lawyer and one representative to a full team on both sides — and everyone in the dossier can see exactly who else has access.</p>
+      </div>
+    </div>
+   
+  </div> -->
+
+  <!-- ===== Capability 3: the client relationship ===== -->
+  <div class="lx-showcase">
+    <div class="lx-showcase-text">
+      <h3>The whole client relationship, in one place</h3>
+      <div class="lx-mini-feature">
+        <h4>A secure home for the relationship</h4>
+        <p>The client admin gets their own secure environment with everything that defines the relationship: the engagement contract, invoices and other key documents.</p>
+      </div>
+      <div class="lx-mini-feature">
+        <h4>A profile per client</h4>
+        <p>Record each client's industry, relevant legal areas and other characteristics — structured data instead of tribal knowledge.</p>
+      </div>
+      <div class="lx-mini-feature">
+        <h4>From knowledge to marketing</h4>
+        <p>Use those profiles to reach the right clients with the right message — targeted, customized mailings by industry or legal interest.</p>
+      </div>
+    </div>
+    
+  </div>
+</section>
+
+<!-- ===== Oversight ===== -->
+<section class="lx-section">
+  <div class="lx-section-head">
+    <h2>Oversight you can act on — and prove</h2>
+    <p>Access control is only real if you can see it, change it and demonstrate it. Larx gives the firm admin all three.</p>
+  </div>
+  <div class="lx-grid lx-grid--4 lx-why">
+    <div>
+      <h4>Per dossier</h4>
+      <p>See at a glance which people have access to which dossier — firm side and client side.</p>
+    </div>
+    <div>
+      <h4>Per person</h4>
+      <p>Click through to anyone's profile and see every dossier they can access — ideal when someone changes roles or leaves.</p>
+    </div>
+    <div>
+      <h4>Change in seconds</h4>
+      <p>Revoke or grant access instantly. One click, effective immediately, recorded in the log.</p>
+    </div>
+    <div>
+      <h4>Prove it later</h4>
+      <p>The complete log per client means you can always demonstrate who had access to what, and when.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== How it works ===== -->
+<section class="lx-section">
+  <div class="lx-section-head">
+    <h2>From new client to running dossier</h2>
+  </div>
+  <div class="lx-steps">
+    <div class="lx-step">
+      <h4>Add the client</h4>
+      <p>Create the client with its profile — industry, legal areas — and appoint the client admin, who gets a secure environment for contracts and invoices.</p>
+    </div>
+    <div class="lx-step">
+      <h4>Assign the people</h4>
+      <p>Add the client's representatives and your firm's lawyers. Each representative receives an onboarding email, sets a personal password, and sees only the dossiers they've been assigned to.</p>
+    </div>
+    <div class="lx-step">
+      <h4>Open dossiers as needed</h4>
+      <p>Create a dossier per case, staff it with the right team, and manage its status — open, frozen or closed — over its lifetime.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FAQ ===== -->
+<section class="lx-section">
+  <div class="lx-section-head">
+    <h2>Frequently asked questions</h2>
+  </div>
+  <div class="lx-faq">
+    <details>
+      <summary>Can a client add people to a dossier themselves?</summary>
+      <p>No. Only the firm admin assigns or removes people — on both the firm's and the client's side. The client can request it, but the firm always decides.</p>
+    </details>
+    <details>
+      <summary>What happens when a representative leaves the client?</summary>
+      <p>Open their profile, see every dossier they have access to, and revoke it in one action. Access ends immediately, and the change is logged.</p>
+    </details>
+    <details>
+      <summary>What is a frozen dossier?</summary>
+      <p>A frozen dossier is read-only: everyone involved can still consult the complete record — chat, documents, notes — but nothing can be changed or added. Ideal for concluded cases that must remain accessible.</p>
+    </details>
+    <details>
+      <summary>Who can see the client admin's environment?</summary>
+      <p>Only the client admin (and your firm). It holds the documents that define the firm–client relationship — the engagement contract, invoices and related material — separate from the individual dossiers.</p>
+    </details>
+    <details>
+      <summary>Can we use client data for marketing?</summary>
+      <p>Yes. Because each client's industry and legal areas are recorded, you can send targeted, customized mailings to exactly the right segment — a marketing tool built on data you already maintain.</p>
+    </details>
+  </div>
+</section>
+
+<!-- ===== Final CTA ===== -->
+<section class="lx-section">
+  <div class="lx-banner lx-cta">
+    <div class="lx-banner-text">
+      <h3>Take control of every client relationship</h3>
+      <ul class="lx-checklist">
+        <li>✓ Free personal demo, no strings attached</li>
+        <li>✓ Set up in one afternoon</li>
+        <li>✓ No credit card required</li>
+      </ul>
+      <a class="lx-button" href="/about">Book a demo</a>
+    </div>
+    <div class="lx-banner-image">Screenshot placeholder</div>
+  </div>
+</section>
+</template>
+
+
+<!-- Unscoped on purpose: the frontmatter features are rendered inside the hero
+     above, so hide the default VPFeatures section that VitePress would
+     otherwise render below the hero (it would duplicate the cards). -->
+<style>
+/* .VPHome .VPFeatures {
+  display: none;
+} */
+ 
+</style>

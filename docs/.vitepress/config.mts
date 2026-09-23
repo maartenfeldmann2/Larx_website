@@ -69,12 +69,12 @@ export default defineConfig({
           { 
             component: 'ClientManagement'
           },
-          { 
+          /* { 
             component: 'Marketing'
-          },
-          { 
+          }, */
+          /* { 
             component: 'Security'
-          },
+          }, */
           
         ]
       },

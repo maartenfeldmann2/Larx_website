@@ -9,6 +9,17 @@ const { isDark } = useData();
 
 // images urls
 
+const h2header = computed(() => {
+  const path = isDark.value 
+    ? '/images/Home/Dark/h2header.png' 
+    : '/images/Home/Light/h2header.png'
+    
+  return {  backgroundImage: `url(${path})`, 
+            backgroundSize: `cover`,
+            backgroundPosition: `50% 50%`,
+        }
+})
+
 
 const clientPortal = computed(() => {
   const path = isDark.value 
@@ -596,7 +607,7 @@ a.hero-feature:hover {
      above, so hide the default VPFeatures section that VitePress would
      otherwise render below the hero (it would duplicate the cards). -->
 <style>
-.VPHome .VPFeatures {
+/* .VPHome .VPFeatures {
   display: none;
-}
+} */
 </style>

@@ -2,6 +2,10 @@
 import { h } from 'vue'
 import type { Theme } from 'vitepress'
 import Home from './components/Pages/Home.vue'
+import FileSharingPortal from './components/Pages/FileSharingPortal.vue'
+import DocumentManagementSystem from './components/Pages/DocumentManagementSystem.vue'
+import ClientManagementPage from './components/Pages/ClientManagementPage.vue'
+import CollaborationPage from './components/Pages/CollaborationPage.vue'
 import DefaultTheme from 'vitepress/theme'
 import FeaturesMenu from './components/FeaturesMenu.vue'
 import Filesharing from './components/Nav/Filesharing.vue'
@@ -23,15 +27,20 @@ export default {
   
   extends: DefaultTheme,
   enhanceApp({ app }) {
+    app.component('Home', Home)
+    app.component('DocumentManagementSystem', DocumentManagementSystem)
+    app.component('ClientManagementPage', ClientManagementPage)
     app.component('FeaturesMenu', FeaturesMenu)
+    app.component('CollaborationPage', CollaborationPage)
     app.component('Filesharing', Filesharing)
     app.component('Collaboration', Collaboration)
     app.component('ClientManagement', ClientManagement)
     app.component('DossierManagement', DossierManagement)
     app.component('Marketing', Marketing)
+    app.component('FileSharingPortal', FileSharingPortal)
     app.component('Features', Features)
     app.component('Security', Security)
-    app.component('Home', Home)
+    
   
 
     // Swap the favicon when the theme toggles. Guarded because this file
