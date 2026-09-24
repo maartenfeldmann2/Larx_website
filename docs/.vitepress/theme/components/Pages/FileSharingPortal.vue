@@ -25,7 +25,7 @@ const hero = computed(() => {
     : '/images/ClientPortal/Light/hero.png'
     
   return {  backgroundImage: `url(${path})`, 
-            backgroundSize: `95%`,
+            backgroundSize: `cover`,
             backgroundPosition: `50% 60%`,
 
 
