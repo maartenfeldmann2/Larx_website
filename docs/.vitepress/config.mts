@@ -53,6 +53,10 @@ export default defineConfig({
       light: '/Logo/logo_larx.png',
       dark: '/Logo/logo_larx_dark.png'
     },
+    footer: {
+      message: 'Released under the <a href="https://github.com/vuejs/vitepress/blob/main/LICENSE">MIT License</a>.',
+      copyright: 'Copyright © 2019-present <a href="https://github.com/yyx990803">Larx Legal</a>'
+    },
     nav: [
       { text: 'Home', link: '/' },
       { text: 'Features',
@@ -115,4 +119,11 @@ export default defineConfig({
   }
   
 })
+/* export interface Footer {
+  // The message shown right before copyright.
+  message?: string
+
+  // The actual copyright text.
+  copyright?: string
+} */
 

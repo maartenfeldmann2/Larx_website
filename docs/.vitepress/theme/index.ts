@@ -16,6 +16,7 @@ import Features from './components/Hero/Features.vue'
 import Marketing from './components/Nav/Marketing.vue'
 import Security from './components/Nav/Security.vue'
 import { createPinia } from 'pinia';
+import VPFooter from 'vitepress/dist/client/theme-default/components/VPFooter.vue';
 
 
 
@@ -40,7 +41,7 @@ export default {
     app.component('FileSharingPortal', FileSharingPortal)
     app.component('Features', Features)
     app.component('Security', Security)
-    
+    app.component('VPFooter', VPFooter)
   
 
     // Swap the favicon when the theme toggles. Guarded because this file

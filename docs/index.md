@@ -2,6 +2,7 @@
 # https://vitepress.dev/reference/default-theme-home-page
 layout: home
 
+
 hero:
   name: "Larx Legal"
   text: "Collaboration for law firms"
@@ -15,6 +16,8 @@ hero:
       link: /features
 
 ---
+
 <!--Page content-->
 <Home/>
+<VPFooter/>
 

@@ -1,6 +1,7 @@
 <script setup lang="ts">
 
 import { onMounted, onUnmounted, ref, nextTick, watch, watchEffect, computed } from 'vue';
+import VPFooter from 'vitepress/dist/client/theme-default/components/VPFooter.vue';
 
 import { useData } from 'vitepress'
 
@@ -417,6 +418,10 @@ const officeBuilding = computed(() => {
             </div>
             <div class="lx-banner-image" :style="officeBuilding">Screenshot placeholder</div>
         </div>
+        </section>
+        <section class="lx-section">
+       <!--  <VPFooter/> -->
+    
         </section>
 </template>
 
