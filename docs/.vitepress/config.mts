@@ -34,7 +34,7 @@ export default defineConfig({
   description: "Secure Client Collaboration Platform",
   head: [
     ['link', { rel: 'icon', id: 'favicon', href: '/logo_larx.png' }],
-    [
+    /* [
       'script',
       { async: '', src: 'https://www.googletagmanager.com/gtag/js?id=G-TZTN5JJ0YS' }
     ],
@@ -46,7 +46,7 @@ export default defineConfig({
           gtag('js', new Date());
 
           gtag('config', 'G-TZTN5JJ0YS');');`
-    ]
+    ] */
   ],
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
