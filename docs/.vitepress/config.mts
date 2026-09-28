@@ -27,18 +27,6 @@ export default defineConfig({
             new URL('./theme/components/VPNav.vue', import.meta.url)
           )
         },
-        /* {
-          find: /^.*\/VPFlyout\.vue$/,
-          replacement: fileURLToPath(
-            new URL('./theme/components/VPFlyout.vue', import.meta.url)
-          )
-        },
-        {
-          find: /^.*\/VPNavBarTranslations\.vue$/,
-          replacement: fileURLToPath(
-            new URL('./theme/components/VPNavBarTranslations.vue', import.meta.url)
-          )
-        }, */
       ]
     }
   },
@@ -46,6 +34,19 @@ export default defineConfig({
   description: "Secure Client Collaboration Platform",
   head: [
     ['link', { rel: 'icon', id: 'favicon', href: '/logo_larx.png' }],
+    [
+      'script',
+      { async: '', src: 'https://www.googletagmanager.com/gtag/js?id=G-TZTN5JJ0YS' }
+    ],
+    [
+      'script',
+      {},
+      `window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'G-TZTN5JJ0YS');');`
+    ]
   ],
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
